@@ -13,4 +13,16 @@ export interface Feature {
 
 export interface ButtonProps {
     children: React.ReactNode;
+    variant?: 'primary'|'secondary';
+    size?: 'sm'|'md'|'lg';
+    onClick?: () => void;
+    href?: string;
+    className?: string;
+}
+
+export interface SectionProps {
+    title: string;
+    subtitle?: string;
+    children: React.ReactNode;
+    className?: string;
 }
