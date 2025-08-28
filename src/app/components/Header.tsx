@@ -23,6 +23,14 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
 }, []);
 
-return 
+return (
+    <header
+     className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+     }`}
+     >
+      <nav className=""
+     </header>
+)
 
 
