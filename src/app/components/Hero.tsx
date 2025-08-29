@@ -13,10 +13,20 @@ const Hero: React.FC = () => {
                         </span>
                     </h1>
                     <p className="text-xl sm:text-2xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                        
+                        Typescript website built to offer support in recovery.
                     </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                        <Button variant="primary" size="lg" href="/get-started">
+                        Learn more
+                        </Button>
+                    </div>
                 </div>
             </div>
+
+            {/* Background section */}
+            <div className="absolute inset-0 bg-[url('/grid.svg)] bg-center [mask-image:linear-gradient(180deg,white,r">
+            
+            </div>
         </section>
-    )
+    );
 }
