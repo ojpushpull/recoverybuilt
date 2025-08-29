@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { NavItem } from '../types';
 
@@ -9,7 +11,7 @@ const Header: React.FC = () => {
     const navItems: NavItem[] = [
         { label: 'Home', href: '/'},
         { label : 'About', href: '/about'},
-        { label: 'Services', href '/services'},
+        { label: 'Services', href: '/services'},
         { label: 'Contact', href: '/contact'}
     ];
 
@@ -57,11 +59,11 @@ return (
                 <span className="sr-only">Open main menu </span>
                 {isMobileMenuOpen ? (
                     <svg className="blog h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLineCap="round" strokeLineJoin="round" strokeWidth={2}  d="M6 18L18 6M6 6l12 12" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}  d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 ) : (
                     <svg className="block:h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLineCap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
                     </svg>
                 
                 )}
@@ -75,6 +77,12 @@ return (
             {navItems.map((item) => (
                 <Link
                  key={item.href}
+                 href={item.href}
+                 className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600"
+                 onClick={() => setIsMobileMenuOpen(false)}
+                 >
+                    {item.label}
+                 </Link>
             ))}
             </div>
            </div>
@@ -83,4 +91,4 @@ return (
      </header>
 )
 
-
+};
