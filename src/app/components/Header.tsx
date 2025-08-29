@@ -35,6 +35,19 @@ return (
             <Link href="/" className="text-2xl font-bold text-blue-600">
             MyApp
             </Link>
+
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-8">
+             {navItems.map((item) => (
+                <Link
+                 key={item.href}
+                 href={item.href}
+                 className="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition"
+                 >
+                    {item.label}
+                 </Link>
+             ))}
+            </div>
         </div>
       </nav>
      </header>
