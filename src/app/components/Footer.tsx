@@ -33,7 +33,22 @@ const Footer: React.FC = () => {
                  </li>
                 </ul>
             </div>
+
+            {/* Contact */}
+            <div>
+                <h3 className="text-lg font-semibold mb-4">Contact</h3>
+                <div className="space-y-2 text-gray-400">
+                    <p>email@example.com</p>
+                    <p></p>
+                </div>
+            </div>
         </div>
-     </footer>
-    )
-}
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+<p>&copy;{currentYear}MyApp.All rights reserved.</p>
+    </div>
+  
+</footer>
+ );
+};
+export default Footer;
