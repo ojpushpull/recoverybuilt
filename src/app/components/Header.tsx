@@ -92,3 +92,5 @@ return (
 )
 
 };
+
+export default Header;
