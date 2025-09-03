@@ -31,4 +31,4 @@ const Hero: React.FC = () => {
     );
 }
 
-export default Header;
+export default Hero;
